@@ -1,0 +1,8 @@
+{
+  "short_name": "@swaraj0_0/add-event-listener-hook",
+  "name": "@swaraj0_0/add-event-listener-hook",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
