@@ -1,21 +1,17 @@
-import * as React from 'react'
+import { useState, useEffect } from 'react'
+const request = require('request-promise')
 
-export const useMyHook = () => {
-  let [{
-    counter
-  }, setState] = React.useState({
-    counter: 0
-  })
-
-  React.useEffect(() => {
-    let interval = window.setInterval(() => {
-      counter++
-      setState({counter})
-    }, 1000)
-    return () => {
-      window.clearInterval(interval)
+export const useAddEventListeners = (userName) => {
+  const [loading, setLoading] = useState(false)
+  const [userData, setUserData] = useState({})
+  useEffect(() => {
+    setLoading(true)
+    async function fetchGithubUser(userName) {
+      const response = await request(`https://api.github.com/users/${userName}`)
+      setUserData(response)
+      setLoading(false)
     }
+    fetchGithubUser(userName)
   }, [])
-
-  return counter
+  return { loading, userData }
 }

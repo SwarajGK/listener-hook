@@ -1,11 +1,11 @@
 import React from 'react'
-import { useMyHook } from '@swaraj0_0/add-event-listener-hook'
+import { useAddEventListeners } from '@swaraj0_0/add-event-listener-hook'
 
 const App = () => {
-  const example = useMyHook()
+  useAddEventListeners('SwarajGK')
   return (
     <div>
-      {example}
+      This is for testing
     </div>
   )
 }
