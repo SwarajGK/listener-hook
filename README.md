@@ -15,12 +15,13 @@ npm install --save @swaraj0_0/add-event-listener-hook
 ```jsx
 import React, { Component } from 'react'
 
-import { useMyHook } from '@swaraj0_0/add-event-listener-hook'
+import { useAddEventListeners } from '@swaraj0_0/add-event-listener-hook'
 
 const Example = () => {
-  const example = useMyHook()
+  const userName = 'SwarajGK';
+  const { loading, userData } = useAddEventListeners(userName)
   return (
-    <div>{example}</div>
+    <div></div>
   )
 }
 ```

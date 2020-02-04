@@ -22,7 +22,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.8.6"
+    "react": ">=16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -68,5 +68,8 @@
   "dependencies": {
     "request": "^2.88.0",
     "request-promise": "^4.2.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
